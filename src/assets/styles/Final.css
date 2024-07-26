@@ -1,0 +1,53 @@
+.audit-header {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.audit-container {
+    display: flex;
+    justify-content: center;
+}
+
+.audit-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.audit-list-item {
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.sulfur-info {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 50px 0;
+    padding: 10px 0;
+}
+
+
+@media (max-width: 600px) {
+    .audit-header {
+        font-size: 1.2em;
+    }
+
+    .audit-list-item {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .sulfur-info {
+        font-size: 1em;
+    }
+}

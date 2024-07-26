@@ -1,0 +1,34 @@
+.explosive-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 9px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.explosive-item.selected {
+    border: 1px solid #d8d8d8;
+    background-color: #eaeaea;
+}
+
+.explosive-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.explosive-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.explosive-name {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}

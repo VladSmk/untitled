@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import {useContext} from "react";
+import {PageContext} from "./context/PageContext";
+import Start from "./pages/Start";
+import SelectExplosive from "./pages/SelectExplosive";
+import SelectBoost from "./pages/SelectBoost";
+import Raid from "./pages/Raid";
+import Check from "./pages/Check";
+import Final from "./pages/Final";
+import './assets/styles/App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { page } = useContext(PageContext);
+
+    return (
+        <>
+            {page === 1 ? (
+                <Start />
+            ) : page === 2 ? (
+                <SelectExplosive />
+            ) : page === 3 ? (
+                <SelectBoost />
+            ) : page === 4 ? (
+                <Raid />
+            ) : page === 5 ? (
+                <Check />
+            ) : (
+                <Final />
+            )}
+        </>
+    );
 }
 
 export default App;

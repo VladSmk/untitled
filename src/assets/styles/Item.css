@@ -1,0 +1,34 @@
+.block {
+    width: 120px;
+    height: auto;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+}
+
+.image-block {
+    position: relative;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.number-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-family: 'Calibri', sans-serif;
+}
+
+.buttons-block {
+    padding: 5px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
