@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Calibri', sans-serif;
 }
-
+.main-block{
+    background: #fdfdfd;
+}
 .app-container {
     display: flex;
     flex-direction: column;
