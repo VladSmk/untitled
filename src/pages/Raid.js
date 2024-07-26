@@ -11,7 +11,7 @@ export default function Raid() {
     const [material, setMaterial] = useState();
 
     return (
-        <>
+        <div className={"raid-main-block"}>
             <div className="material-button-container">
                 {materials.map((m) => (
                     <button key={m} onClick={() => setMaterial(m)}>{m}</button>
@@ -31,6 +31,6 @@ export default function Raid() {
             <button className="navigate-button" onClick={prevPage}>Prev</button>
                 <button className="navigate-button" onClick={nextPage}>Next</button>
             </div>
-        </>
+        </div>
     );
 }

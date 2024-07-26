@@ -1,7 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
 .start-page {
     display: flex;
     flex-direction: column;
@@ -9,6 +5,7 @@
     justify-content: center;
     height: 80vh;
     text-align: center;
+    background: #fdfdfd;
 }
 
 .start-page h2 {
