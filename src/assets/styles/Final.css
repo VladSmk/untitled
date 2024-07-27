@@ -13,7 +13,7 @@
 .sulfur-info {
     width: 100%;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 6px 0;
     padding: 3px 0;
     color: var(--tg-theme-subtitle-text-color);
@@ -37,7 +37,7 @@
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 0.9em;
     width: 94%;
     margin: 10px 3%;
 }
