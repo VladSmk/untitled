@@ -15,7 +15,6 @@ export default function SelectExplosive() {
     useEffect(() => {
         tg.MainButton.text = "Next";
         tg.MainButton.onClick(nextPage);
-        tg.MainButton.hide();
     }, []);
 
     const handleClick = (exp) => {
@@ -24,7 +23,9 @@ export default function SelectExplosive() {
                 ? prevSelectedItems.filter(item => item !== exp)
                 : [...prevSelectedItems, exp]
         );
-        if (selectedExplosives.length > 0)
+        if (selectedExplosives.length === 0)
+            tg.MainButton.hide();
+        else
             tg.MainButton.show();
     };
 

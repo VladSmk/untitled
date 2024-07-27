@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 import { PageContext } from "../context/PageContext";
 import "../assets/styles/Check.css";
-
+import {tg} from "../App";
 export default function Check() {
     const { prevPage, nextPage } = useContext(PageContext);
     const { selectedItems, selectedExplosives } = useContext(DataContext);

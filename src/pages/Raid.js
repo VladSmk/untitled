@@ -5,12 +5,14 @@ import { data } from "../data/itemsData";
 import Item from "../components/Item";
 import { getUniqueMaterials } from "../utils/DataHelper";
 import {DataContext} from "../context/DataContext";
+import {tg} from "../App";
 
 export default function Raid() {
     const { selectedItems } = useContext(DataContext);
     const { nextPage, prevPage } = useContext(PageContext);
     const materials = getUniqueMaterials(data);
     const [material, setMaterial] = useState();
+
 
     return (
         <div className={"raid-main-block"}>
