@@ -1,7 +1,9 @@
 .title-block {
     padding: 10px 5% 0 5%;
+    margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
+    bottom: 0;
 }
 .title-style {
     text-align: center;
