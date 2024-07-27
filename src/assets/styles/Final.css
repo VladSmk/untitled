@@ -1,11 +1,18 @@
 .title-block {
     padding: 10px 5% 0 5%;
     width: 100%;
-    position: fixed;
     z-index: 2;
 }
 .title-style {
     text-align: center;
+}
+.sulfur-info {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 6px 0;
+    padding: 3px 0;
+    color: var(--tg-theme-subtitle-text-color);
 }
 
 .audit-container {
@@ -31,14 +38,7 @@
     margin: 10px 3%;
 }
 
-.sulfur-info {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2em;
-    margin: 6px 0;
-    padding: 3px 0;
-    color: var(--tg-theme-subtitle-text-color);
-}
+
 
 
 @media (max-width: 600px) {
