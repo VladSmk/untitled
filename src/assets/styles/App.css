@@ -30,7 +30,7 @@ body {
     width: 100%;
     padding: 13px;
     background-color: #878787;
-    color: white;
+    color: var(--tg-theme-text-color);
     border: none;
     font-size: 20px;
     cursor: pointer;

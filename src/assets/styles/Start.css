@@ -9,4 +9,5 @@
 
 .start-page h2 {
     margin-top: 20px;
+    color: var(--tg-theme-text-color);
 }
