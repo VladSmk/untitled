@@ -6,13 +6,8 @@ const Sidebar = ({ categories, onSelect, selectedCategory }) => {
         <div className="sidebar-container">
             <div className="categories">
                 {Object.keys(categories).map((category, index) => (
-                    <div
-                        key={index}
-                        className={`category ${selectedCategory === category ? 'selected' : ''}`}
-                        onClick={() => onSelect(category)}
-                    >
-                        {category}
-                    </div>
+                    <div key={index} className={`category ${selectedCategory === category ? 'selected' : ''}`}
+                        onClick={() => onSelect(category)}>{category}</div>
                 ))}
             </div>
         </div>

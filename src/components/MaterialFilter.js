@@ -6,13 +6,8 @@ const MaterialFilter = ({ materials, selectedMaterial, onSelectMaterial }) => {
             <h3>Materials</h3>
             <ul>
                 {materials.map((material, index) => (
-                    <li
-                        key={index}
-                        className={selectedMaterial === material ? 'selected' : ''}
-                        onClick={() => onSelectMaterial(material)}
-                    >
-                        {material}
-                    </li>
+                    <li key={index} className={selectedMaterial === material ? 'selected' : ''}
+                        onClick={() => onSelectMaterial(material)}>{material}</li>
                 ))}
             </ul>
         </div>
