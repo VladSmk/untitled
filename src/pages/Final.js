@@ -11,23 +11,27 @@ export default function Final() {
     const { selectedExplosives, selectedItems } = useContext(DataContext);
     const { list, sulfur } = useCalculator(selectedExplosives, selectedItems);
 
-    function tryAgain() {
+    const handleTryAgain = () => {
         deleteData();
         setPage(2);
-    }
+    };
 
     useEffect(() => {
-        tg.MainButton.text = "TryAgain";
-        tg.MainButton.onClick(tryAgain);
+        tg.MainButton.text = "Try Again";
+        tg.MainButton.onClick = handleTryAgain;
         tg.MainButton.show();
 
         tg.BackButton.hide();
-    }, [tryAgain]);
+
+        return () => {
+            tg.MainButton.onClick = null;
+        };
+    }, [handleTryAgain]);
 
     return (
         <div>
-            <div className={"title-block"}>
-                <h2 className={"title-style"}>Result</h2>
+            <div className="title-block">
+                <h2 className="title-style">Result</h2>
             </div>
             <div className="audit-container">
                 <ul className="audit-list">
@@ -36,9 +40,6 @@ export default function Final() {
                     ))}
                 </ul>
             </div>
-            {/*<div className="navigate-button-block">*/}
-            {/*    <button className="navigate-button" onClick={tryAgain}>Try Again</button>*/}
-            {/*</div>*/}
             <div className="sulfur-info">
                 Total sulfur: {sulfur}
             </div>

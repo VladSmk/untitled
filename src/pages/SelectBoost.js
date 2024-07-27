@@ -9,25 +9,23 @@ export default function SelectBoost() {
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick(nextPage);
+        tg.MainButton.onClick = nextPage;
         tg.MainButton.show();
 
         tg.BackButton.text = "Back";
-        tg.BackButton.onClick(setPage(2));
+        tg.BackButton.onClick = () => setPage(2);
         tg.BackButton.show();
+
+        return () => {
+            tg.MainButton.onClick = null;
+            tg.BackButton.onClick = null;
+        };
     }, [nextPage, setPage]);
 
     return (
         <div className="boost-page">
             <h2>Boost Page</h2>
             <Loading/>
-            {/*<div className="navigate-button-block">*/}
-            {/*    <button className="navigate-button" onClick={prevPage}>Prev</button>*/}
-            {/*    <button className="navigate-button" onClick={nextPage}>Next</button>*/}
-            {/*</div>*/}
         </div>
     );
-
-
 }
-

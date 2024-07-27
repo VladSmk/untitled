@@ -11,14 +11,21 @@ export default function Raid() {
     const { selectedItems } = useContext(DataContext);
     const { nextPage, prevPage, setPage } = useContext(PageContext);
     const materials = getUniqueMaterials(data);
-    const [material, setMaterial] = useState();
+    const [material, setMaterial] = useState(null);
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick(nextPage);
+        tg.MainButton.onClick = nextPage;
+        tg.MainButton.show();
+
         tg.BackButton.text = "Back";
-        tg.BackButton.onClick(setPage(3));
+        tg.BackButton.onClick = () => setPage(3);
         tg.BackButton.show();
+
+        return () => {
+            tg.MainButton.onClick = null;
+            tg.BackButton.onClick = null;
+        };
     }, [nextPage, setPage]);
 
     useEffect(() => {
@@ -48,12 +55,6 @@ export default function Raid() {
                     )
                 ))}
             </div>
-            {/*<div className="navigate-button-block">*/}
-            {/*    <button className="navigate-button" onClick={prevPage}>Prev</button>*/}
-            {/*    {selectedItems.length > 0 && (*/}
-            {/*        <button className="navigate-button" onClick={nextPage}>Next</button>*/}
-            {/*    )}*/}
-            {/*</div>*/}
         </div>
     );
 }

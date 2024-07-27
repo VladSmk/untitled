@@ -12,9 +12,14 @@ export default function SelectExplosive() {
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick(nextPage);
+        tg.MainButton.onClick = nextPage;
         tg.BackButton.hide();
-    }, []);
+
+        return () => {
+            tg.MainButton.onClick = null;
+            tg.MainButton.hide();
+        };
+    }, [nextPage]);
 
     useEffect(() => {
         if (selectedExplosives.length === 0) {
@@ -48,11 +53,6 @@ export default function SelectExplosive() {
                     />
                 ))}
             </div>
-            {/*{selectedExplosives.length > 0 && (*/}
-            {/*    <div className="navigate-button-block">*/}
-            {/*        <button className="navigate-button" onClick={nextPage}>Next</button>*/}
-            {/*    </div>*/}
-            {/*)}*/}
         </div>
     );
 }
