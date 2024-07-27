@@ -22,10 +22,6 @@ export default function Final() {
         tg.MainButton.show();
 
         tg.BackButton.hide();
-
-        return () => {
-            tg.MainButton.onClick(null);
-        };
     }, []);
 
     return (

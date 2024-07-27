@@ -5,15 +5,15 @@ import Loading from "../components/Loading";
 import {tg} from "../App";
 
 export default function SelectBoost() {
-    const { nextPage, prevPage, setPage } = useContext(PageContext);
+    const { nextPage, prevPage } = useContext(PageContext);
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick(setPage(4));
+        tg.MainButton.onClick(nextPage);
         tg.MainButton.show();
 
         tg.BackButton.text = "Back";
-        tg.BackButton.onClick(setPage(2));
+        tg.BackButton.onClick(prevPage);
         tg.BackButton.show();
     }, []);
 

@@ -8,17 +8,12 @@ import {tg} from "../App";
 
 export default function SelectExplosive() {
     const {selectedExplosives, setSelectedExplosives} = useContext(DataContext);
-    const { setPage } = useContext(PageContext);
+    const { nextPage, prevPage } = useContext(PageContext);
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick(setPage(3));
+        tg.MainButton.onClick(nextPage);
         tg.BackButton.hide();
-
-        return () => {
-            tg.MainButton.onClick(null);
-            tg.MainButton.hide();
-        };
     }, []);
 
     useEffect(() => {
