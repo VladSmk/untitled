@@ -16,7 +16,7 @@ export default function Final() {
     }
 
     return (
-        <div className="audit-page">
+        <div >
             <h2 className="audit-header">Result</h2>
             <div className="audit-container">
                 <ul className="audit-list">

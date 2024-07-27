@@ -31,9 +31,16 @@ export default function SelectExplosive() {
                     />
                 ))}
             </div>
-            <div className="navigate-button-block">
-                <button className="navigate-button" onClick={nextPage}>Next</button>
-            </div>
+            {selectedExplosives.length > 0 ? (
+                <div className="navigate-button-block">
+                    <button className="navigate-button" onClick={nextPage}>Next</button>
+                </div>
+            ) : (
+                <>
+
+                </>
+            )}
+
         </div>
     );
 }

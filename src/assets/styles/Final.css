@@ -14,16 +14,16 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    max-width: 400px;
 }
 
 .audit-list-item {
     background-color: #575757;
-    margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     font-size: 1.2em;
+    width: 94%;
+    margin: 10px 3%;
 }
 
 .sulfur-info {
