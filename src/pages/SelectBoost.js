@@ -9,18 +9,18 @@ export default function SelectBoost() {
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick(nextPage);
+        tg.MainButton.onClick(setPage(4));
         tg.MainButton.show();
 
         tg.BackButton.text = "Back";
-        tg.BackButton.onClick = () => setPage(2);
+        tg.BackButton.onClick(setPage(2));
         tg.BackButton.show();
 
         return () => {
             tg.MainButton.onClick(null);
             tg.BackButton.onClick(null);
         };
-    }, [nextPage, setPage]);
+    }, []);
 
     return (
         <div className="boost-page">

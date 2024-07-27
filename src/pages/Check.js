@@ -24,7 +24,7 @@ export default function Check() {
             tg.BackButton.onClick(null);
             tg.BackButton.hide();
         };
-    }, [setPage]);
+    }, []);
 
     return (
         <div className="check-page">

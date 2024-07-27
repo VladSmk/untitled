@@ -15,7 +15,7 @@ export default function Raid() {
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick(nextPage);
+        tg.MainButton.onClick(setPage(5));
         tg.MainButton.show();
 
         tg.BackButton.text = "Back";
@@ -26,7 +26,7 @@ export default function Raid() {
             tg.MainButton.onClick(null);
             tg.BackButton.onClick(null);
         };
-    }, [nextPage, setPage]);
+    }, []);
 
     useEffect(() => {
         if (selectedItems.length === 0) {

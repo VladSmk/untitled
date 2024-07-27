@@ -26,7 +26,7 @@ export default function Final() {
         return () => {
             tg.MainButton.onClick(null);
         };
-    }, [handleTryAgain]);
+    }, []);
 
     return (
         <div>

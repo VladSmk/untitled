@@ -4,14 +4,14 @@ import "../assets/styles/Start.css";
 import { tg } from "../App";
 
 export default function Start() {
-    const { nextPage } = useContext(PageContext);
+    const { setPage } = useContext(PageContext);
 
     useEffect(() => {
         tg.MainButton.text = "Start";
-        tg.MainButton.onClick(nextPage);
+        tg.MainButton.onClick(setPage(2));
         tg.MainButton.show();
         tg.BackButton.hide();
-    }, [nextPage]);
+    }, []);
 
     return (
         <div className="start-page">
