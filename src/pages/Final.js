@@ -31,7 +31,7 @@ export default function Final() {
 
 
     return (
-        <div>
+        <div className="audit-container">
             <div className="title-block">
                 <h2 className="title-style">Result</h2>
             </div>
