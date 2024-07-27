@@ -14,7 +14,7 @@ export default function SelectExplosive() {
         tg.MainButton.text = "Next";
         tg.MainButton.onClick(nextPage);
         tg.BackButton.hide();
-    }, [nextPage]);
+    }, []);
 
     useEffect(() => {
         if (selectedExplosives.length === 0) {
