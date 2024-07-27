@@ -42,7 +42,7 @@ export default function SelectExplosive() {
                     <Explosive
                         key={index}
                         name={exp}
-                        pathToImage={explosiveImages[index]}
+                        image={explosiveImages[index]}
                         onClick={() => handleClick(exp)}
                         selected={selectedExplosives.includes(exp)}
                     />
