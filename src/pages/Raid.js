@@ -45,7 +45,7 @@ export default function Raid() {
             <div className="items-container">
                 {data.map((item) => (
                     item.material === material && (
-                        <div className="item">
+                        <div className="item" key={item.name}>
                             <Item material={item.material} name={item.name} image={item.image}/>
                         </div>
                     )
