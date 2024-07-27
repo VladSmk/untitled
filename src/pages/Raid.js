@@ -31,12 +31,12 @@ export default function Raid() {
                     )
                 ))}
             </div>
-            {selectedItems.length > 0 && (
-                <div className="navigate-button-block">
-                    <button className="navigate-button" onClick={prevPage}>Prev</button>
+            <div className="navigate-button-block">
+                <button className="navigate-button" onClick={prevPage}>Prev</button>
+                {selectedItems.length > 0 && (
                     <button className="navigate-button" onClick={nextPage}>Next</button>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 }

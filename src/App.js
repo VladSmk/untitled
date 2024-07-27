@@ -7,7 +7,7 @@ import Raid from "./pages/Raid";
 import Check from "./pages/Check";
 import Final from "./pages/Final";
 import './assets/styles/App.css';
-
+window.Telegram.WebApp.expand()
 function App() {
     const { page } = useContext(PageContext);
 
