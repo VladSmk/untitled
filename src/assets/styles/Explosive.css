@@ -12,7 +12,7 @@
 }
 
 .explosive-item.selected {
-    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-color);
 }
 
 .explosive-item img {

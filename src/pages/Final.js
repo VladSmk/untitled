@@ -35,15 +35,15 @@ export default function Final() {
             <div className="title-block">
                 <h2 className="title-style">Result</h2>
             </div>
+            <div className="sulfur-info">
+                Total sulfur: {sulfur}
+            </div>
             <div className="audit-container">
                 <ul className="audit-list">
                     {list.map((item, index) => (
                         <li key={index} className="audit-list-item">{item}</li>
                     ))}
                 </ul>
-            </div>
-            <div className="sulfur-info">
-                Total sulfur: {sulfur}
             </div>
         </div>
     );
