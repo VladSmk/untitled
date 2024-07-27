@@ -11,10 +11,10 @@ export default function Final() {
     const { selectedExplosives, selectedItems } = useContext(DataContext);
     const { list, sulfur } = useCalculator(selectedExplosives, selectedItems);
 
-    const handleTryAgain = () => {
+    function handleTryAgain (){
         deleteData();
         setPage(2);
-    };
+    }
 
     useEffect(() => {
         tg.MainButton.text = "Try Again";
