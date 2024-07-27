@@ -10,7 +10,7 @@ const PageProvider = ({ children }) => {
     }
 
     function prevPage() {
-        setPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
+        setPage(page>0 ? page-1 : page);
     }
 
     return (
