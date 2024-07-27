@@ -186,9 +186,6 @@ const useCalculator = (selectedExplosives, selectedItems) => {
         return list[explosives.indexOf(bestExp)];
     }
 
-
-
-
     function findCheapestExplosive(list) {
         const costs = sulfurPerOne.map((price, index) => price * list[index] * (selectedExplosives.includes(explosives[index]) ? 1 : 9999));
         const minCostIndex = costs.indexOf(Math.min(...costs));
