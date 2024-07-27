@@ -8,7 +8,7 @@ export default function Start() {
 
     useEffect(() => {
         tg.MainButton.text = "Start";
-        tg.MainButton.onClick = nextPage;
+        tg.MainButton.onClick(nextPage);
         tg.MainButton.show();
         tg.BackButton.hide();
     }, [nextPage]);

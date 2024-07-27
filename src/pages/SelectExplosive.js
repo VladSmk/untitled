@@ -12,11 +12,11 @@ export default function SelectExplosive() {
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick = nextPage;
+        tg.MainButton.onClick(nextPage);
         tg.BackButton.hide();
 
         return () => {
-            tg.MainButton.onClick = null;
+            tg.MainButton.onClick(null);
             tg.MainButton.hide();
         };
     }, [nextPage]);

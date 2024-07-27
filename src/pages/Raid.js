@@ -15,16 +15,16 @@ export default function Raid() {
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick = nextPage;
+        tg.MainButton.onClick(nextPage);
         tg.MainButton.show();
 
         tg.BackButton.text = "Back";
-        tg.BackButton.onClick = () => setPage(3);
+        tg.BackButton.onClick(setPage(3));
         tg.BackButton.show();
 
         return () => {
-            tg.MainButton.onClick = null;
-            tg.BackButton.onClick = null;
+            tg.MainButton.onClick(null);
+            tg.BackButton.onClick(null);
         };
     }, [nextPage, setPage]);
 

@@ -11,17 +11,17 @@ export default function Check() {
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick = () => setPage(6);
+        tg.MainButton.onClick(setPage(6));
         tg.MainButton.show();
 
         tg.BackButton.text = "Back";
-        tg.BackButton.onClick = () => setPage(4);
+        tg.BackButton.onClick(setPage(4));
         tg.BackButton.show();
 
         return () => {
-            tg.MainButton.onClick = null;
+            tg.MainButton.onClick(null);
             tg.MainButton.hide();
-            tg.BackButton.onClick = null;
+            tg.BackButton.onClick(null);
             tg.BackButton.hide();
         };
     }, [setPage]);

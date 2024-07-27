@@ -18,13 +18,13 @@ export default function Final() {
 
     useEffect(() => {
         tg.MainButton.text = "Try Again";
-        tg.MainButton.onClick = handleTryAgain;
+        tg.MainButton.onClick(handleTryAgain);
         tg.MainButton.show();
 
         tg.BackButton.hide();
 
         return () => {
-            tg.MainButton.onClick = null;
+            tg.MainButton.onClick(null);
         };
     }, [handleTryAgain]);
 
