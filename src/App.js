@@ -8,7 +8,7 @@ import Check from "./pages/Check";
 import Final from "./pages/Final";
 import './assets/styles/App.css';
 
-import {bl} from './assets/img/items/b1.png';
+import bl from './assets/img/items/b1.png';
 
 export const tg = window.Telegram.WebApp;
 
