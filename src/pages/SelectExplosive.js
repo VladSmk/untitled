@@ -4,9 +4,7 @@ import {PageContext} from "../context/PageContext";
 import {explosiveImages, explosives} from "../data/explosivesData";
 import Explosive from "../components/Explosive";
 import "../assets/styles/SelectExplosive.css";
-
 import {tg} from "../App";
-
 
 export default function SelectExplosive() {
     const {selectedExplosives, setSelectedExplosives} = useContext(DataContext);
@@ -15,7 +13,15 @@ export default function SelectExplosive() {
     useEffect(() => {
         tg.MainButton.text = "Next";
         tg.MainButton.onClick(nextPage);
-    }, []);
+    }, [nextPage]);
+
+    useEffect(() => {
+        if (selectedExplosives.length === 0) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.show();
+        }
+    }, [selectedExplosives]);
 
     const handleClick = (exp) => {
         setSelectedExplosives(prevSelectedItems =>
@@ -23,16 +29,12 @@ export default function SelectExplosive() {
                 ? prevSelectedItems.filter(item => item !== exp)
                 : [...prevSelectedItems, exp]
         );
-        if (selectedExplosives.length === 0)
-            tg.MainButton.hide();
-        else
-            tg.MainButton.show();
     };
 
     return (
         <div className="select-exp-container">
-            <div className={"title-block"}>
-                <h2 className={"title-style"}>Choose explosive you have</h2>
+            <div className="title-block">
+                <h2 className="title-style">Choose explosive you have</h2>
             </div>
             <div className="explosives-grid">
                 {explosives.map((exp, index) => (
@@ -45,16 +47,11 @@ export default function SelectExplosive() {
                     />
                 ))}
             </div>
-            {selectedExplosives.length > 0 ? (
+            {selectedExplosives.length > 0 && (
                 <div className="navigate-button-block">
                     <button className="navigate-button" onClick={nextPage}>Next</button>
                 </div>
-            ) : (
-                <>
-
-                </>
             )}
-
         </div>
     );
 }
