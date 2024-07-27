@@ -13,6 +13,7 @@ export default function SelectExplosive() {
     useEffect(() => {
         tg.MainButton.text = "Next";
         tg.MainButton.onClick(nextPage);
+        tg.MainButton.hide();
         if (selectedExplosives.length > 0)
             tg.MainButton.show();
     }, []);
