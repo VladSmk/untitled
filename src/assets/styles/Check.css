@@ -41,7 +41,7 @@
 .selected-section li {
     display: flex;
     justify-content: space-between;
-    background-color: #575757;
+    background-color: var(--tg-theme-bg-color);
     margin-bottom: 5px;
     padding: 10px;
     border-radius: 5px;

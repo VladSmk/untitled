@@ -39,7 +39,7 @@
     font-size: 1.2em;
     margin: 45px 0;
     padding: 10px 0;
-    background-color: #6a6a6a;
+    background-color: var(--tg-theme-secondary-bg-color);
 }
 
 
