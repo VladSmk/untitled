@@ -32,8 +32,8 @@ export default function Final() {
 
     return (
         <div>
-            <div className="title-block">
-                <h2 className="title-style">Result</h2>
+            <div className="title-block-f">
+                <h2 className="title-style-f">Result</h2>
             </div>
             <div className="sulfur-info">
                 Total sulfur: {sulfur}
