@@ -4,7 +4,9 @@ import {PageContext} from "../context/PageContext";
 import {explosiveImages, explosives} from "../data/explosivesData";
 import Explosive from "../components/Explosive";
 import "../assets/styles/SelectExplosive.css";
+
 import {tg} from "../App";
+
 
 export default function SelectExplosive() {
     const {selectedExplosives, setSelectedExplosives} = useContext(DataContext);
@@ -14,8 +16,6 @@ export default function SelectExplosive() {
         tg.MainButton.text = "Next";
         tg.MainButton.onClick(nextPage);
         tg.MainButton.hide();
-        if (selectedExplosives.length > 0)
-            tg.MainButton.show();
     }, []);
 
     const handleClick = (exp) => {
@@ -24,6 +24,8 @@ export default function SelectExplosive() {
                 ? prevSelectedItems.filter(item => item !== exp)
                 : [...prevSelectedItems, exp]
         );
+        if (selectedExplosives.length > 0)
+            tg.MainButton.show();
     };
 
     return (
