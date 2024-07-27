@@ -1,6 +1,10 @@
 
 .title-block {
-    margin: 10px 0 0 0;
+    padding: 10px 5% 0 5%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: #6a6a6a;
 }
 .title-style {
     text-align: center;
@@ -36,6 +40,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 10% 0;
 }
 
 .items-container .item {

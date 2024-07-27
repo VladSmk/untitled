@@ -16,8 +16,10 @@ export default function Final() {
     }
 
     return (
-        <div >
-            <h2 className="audit-header">Result</h2>
+        <div>
+            <div className={"title-block"}>
+                <h2 className={"title-style"}>Result</h2>
+            </div>
             <div className="audit-container">
                 <ul className="audit-list">
                     {list.map((item, index) => (

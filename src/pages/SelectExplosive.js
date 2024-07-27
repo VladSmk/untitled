@@ -19,7 +19,9 @@ export default function SelectExplosive() {
 
     return (
         <div className="select-exp-container">
-            <h2>Choose explosive you have</h2>
+            <div className={"title-block"}>
+                <h2 className={"title-style"}>Choose explosive you have</h2>
+            </div>
             <div className="explosives-grid">
                 {explosives.map((exp, index) => (
                     <Explosive

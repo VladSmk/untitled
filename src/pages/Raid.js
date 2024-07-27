@@ -31,15 +31,11 @@ export default function Raid() {
                     )
                 ))}
             </div>
-            {selectedItems.length > 0 ? (
+            {selectedItems.length > 0 && (
                 <div className="navigate-button-block">
                     <button className="navigate-button" onClick={prevPage}>Prev</button>
                     <button className="navigate-button" onClick={nextPage}>Next</button>
                 </div>
-            ) :(
-                <>
-
-                </>
             )}
         </div>
     );

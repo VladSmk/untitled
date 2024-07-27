@@ -10,7 +10,9 @@ export default function Check() {
 
     return (
         <div className="check-page">
-            <h2>Check if everything is correct</h2>
+            <div className={"title-block"}>
+                <h2 className={"title-style"}>Check if everything is correct</h2>
+            </div>
             <div className="selected-section">
                 <h3>Selected Explosives</h3>
                 <ul>
