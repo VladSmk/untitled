@@ -8,8 +8,6 @@ import Check from "./pages/Check";
 import Final from "./pages/Final";
 import './assets/styles/App.css';
 
-import im from "./assets/img/items/ok.jpg";
-
 export const tg = window.Telegram.WebApp;
 
 function App() {
@@ -17,7 +15,6 @@ function App() {
 
     return (
         <>
-            <img src={im} alt={"..."}/>
             {page === 1 ? (
                 <Start />
             ) : page === 2 ? (
