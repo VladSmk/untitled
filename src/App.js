@@ -12,7 +12,7 @@ function App() {
     const { page } = useContext(PageContext);
 
     return (
-        <div className="main-block">
+        <>
             {page === 1 ? (
                 <Start />
             ) : page === 2 ? (
@@ -26,7 +26,7 @@ function App() {
             ) : (
                 <Final />
             )}
-        </div>
+        </>
     );
 }
 

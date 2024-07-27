@@ -5,7 +5,6 @@
     justify-content: center;
     text-align: center;
     padding: 20px;
-    background: #fdfdfd;
 }
 
 .check-page h2 {
@@ -31,7 +30,7 @@
 .selected-section li {
     display: flex;
     justify-content: space-between;
-    background-color: #f4f4f4;
+    background-color: #575757;
     margin-bottom: 5px;
     padding: 10px;
     border-radius: 5px;
