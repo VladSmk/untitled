@@ -8,24 +8,32 @@ import Check from "./pages/Check";
 import Final from "./pages/Final";
 import './assets/styles/App.css';
 
-function App() {
-    const { page } = useContext(PageContext);
+const tg = window.Telegram.WebApp;
 
+function App() {
+
+    const testButton = () => {
+        tg.MainButton.text = "Test button";
+        tg.MainButton.show();
+    }
+
+    const { page } = useContext(PageContext);
     return (
         <>
-            {page === 1 ? (
-                <Start />
-            ) : page === 2 ? (
-                <SelectExplosive />
-            ) : page === 3 ? (
-                <SelectBoost />
-            ) : page === 4 ? (
-                <Raid />
-            ) : page === 5 ? (
-                <Check />
-            ) : (
-                <Final />
-            )}
+            <button onClick={testButton}>button</button>
+            {/*{page === 1 ? (*/}
+            {/*    <Start />*/}
+            {/*) : page === 2 ? (*/}
+            {/*    <SelectExplosive />*/}
+            {/*) : page === 3 ? (*/}
+            {/*    <SelectBoost />*/}
+            {/*) : page === 4 ? (*/}
+            {/*    <Raid />*/}
+            {/*) : page === 5 ? (*/}
+            {/*    <Check />*/}
+            {/*) : (*/}
+            {/*    <Final />*/}
+            {/*)}*/}
         </>
     );
 }
