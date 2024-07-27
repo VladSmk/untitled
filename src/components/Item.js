@@ -3,8 +3,6 @@ import "../assets/styles/Item.css";
 import CustomButton from "./CustomButton";
 import {DataContext} from "../context/DataContext";
 
-import block4 from '../assets/img/items/block1.jpg';
-
 export default function Item({material, name, image}) {
     const {plusItem, minusItem, getItemCount} = useContext(DataContext);
     const [number, setNumber] = useState(getItemCount(material, name));
@@ -24,7 +22,7 @@ export default function Item({material, name, image}) {
     return (
         <div className={"block"}>
             <div className={"image-block"} onClick={plusOne}>
-                <img className={"image"} src={block4} alt={"..."}/>
+                <img className={"image"} src={image} alt={"..."}/>
                 {number > 0 && (
                     <div className={"number-block"} style={{padding: number > 9 ? '5px 6.5px' : '5px 10px'}}>
                         <span className={"number"}>{number}</span>
