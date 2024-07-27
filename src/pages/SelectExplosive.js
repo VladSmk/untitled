@@ -1,13 +1,21 @@
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import {DataContext} from "../context/DataContext";
 import {PageContext} from "../context/PageContext";
 import {explosiveImages, explosives} from "../data/explosivesData";
 import Explosive from "../components/Explosive";
 import "../assets/styles/SelectExplosive.css";
+import {tg} from "../App";
 
 export default function SelectExplosive() {
     const {selectedExplosives, setSelectedExplosives} = useContext(DataContext);
     const { nextPage } = useContext(PageContext);
+
+    useEffect(() => {
+        tg.MainButton.text = "Next";
+        tg.MainButton.onClick(nextPage);
+        if (selectedExplosives.length > 0)
+            tg.MainButton.show();
+    }, []);
 
     const handleClick = (exp) => {
         setSelectedExplosives(prevSelectedItems =>

@@ -1,8 +1,16 @@
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import {PageContext} from "../context/PageContext";
 import "../assets/styles/Start.css";
+import { tg } from "../App";
 
 export default function Start() {
+
+    useEffect(() => {
+        tg.MainButton.text = "Start";
+        tg.MainButton.onClick(nextPage);
+        tg.MainButton.show();
+    }, []);
+
     const { nextPage } = useContext(PageContext);
 
     return (
