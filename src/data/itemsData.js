@@ -1,7 +1,7 @@
-import block1 from '/img/items/block1.jpg';
-import block2 from '/img/items/block2.jpg';
-import block3 from '/img/items/block3.jpg';
-import block4 from '/img/items/block4.jpg';
+import block1 from '../assets/img/items/block1.jpg';
+import block2 from '../assets/img/items/block2.jpg';
+import block3 from '../assets/img/items/block3.jpg';
+import block4 from '../assets/img/items/block4.jpg';
 
 export const data = [
     {material: "wood", name: "door", path: block1},
