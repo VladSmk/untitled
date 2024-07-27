@@ -38,7 +38,11 @@ export default function Raid() {
             </div>
             <div className="material-button-container">
                 {materials.map((m) => (
-                    <button key={m} onClick={() => setMaterial(m)}>{m}</button>
+                    <>
+                        <button style={{color: m===material ? 'var(--tg-theme-subtitle-text-color)'
+                                : 'var(--tg-theme-text-color)'}} key={m} onClick={() => setMaterial(m)}>{m}</button>
+
+                    </>
                 ))}
             </div>
             <div className="items-container">
