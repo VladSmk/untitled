@@ -13,24 +13,26 @@ export default function Check() {
             <div className={"title-block"}>
                 <h2 className={"title-style"}>Check if everything is correct</h2>
             </div>
-            <div className="selected-section">
-                <h3>Selected Explosives</h3>
-                <ul>
-                    {selectedExplosives.map((exp, index) => (
-                        <li key={index}>{exp}</li>
-                    ))}
-                </ul>
-            </div>
-            <div className="selected-section">
-                <h3>Selected Items</h3>
-                <ul>
-                    {selectedItems.map((item, index) => (
-                        <li key={index}>
-                            <span className="item-left">{item.material + " " + item.name}</span>
-                            <span className="item-right">{item.number}</span>
-                        </li>
-                    ))}
-                </ul>
+            <div className="select-blocks">
+                <div className="selected-section">
+                    <h3>Selected Explosives</h3>
+                    <ul>
+                        {selectedExplosives.map((exp, index) => (
+                            <li key={index}>{exp}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="selected-section">
+                    <h3>Selected Items</h3>
+                    <ul>
+                        {selectedItems.map((item, index) => (
+                            <li key={index}>
+                                <span className="item-left">{item.material + " " + item.name}</span>
+                                <span className="item-right">{item.number}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
             <div className="navigate-button-block">
                 <button className="navigate-button" onClick={prevPage}>Prev</button>
