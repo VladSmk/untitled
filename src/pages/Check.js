@@ -5,16 +5,16 @@ import { PageContext } from "../context/PageContext";
 import "../assets/styles/Check.css";
 import {tg} from "../App";
 export default function Check() {
-    const { prevPage, nextPage } = useContext(PageContext);
+    const { setPage } = useContext(PageContext);
     const { selectedItems, selectedExplosives } = useContext(DataContext);
 
     useEffect(() => {
         tg.MainButton.text = "Next";
-        tg.MainButton.onClick(nextPage);
+        tg.MainButton.onClick(setPage(6));
         tg.MainButton.show();
 
         tg.BackButton.text = "Back";
-        tg.BackButton.onClick(prevPage);
+        tg.BackButton.onClick(setPage(4));
         tg.BackButton.show();
     }, []);
 

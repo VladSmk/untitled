@@ -9,7 +9,7 @@ import {tg} from "../App";
 
 export default function Raid() {
     const { selectedItems } = useContext(DataContext);
-    const { nextPage, prevPage } = useContext(PageContext);
+    const { nextPage, prevPage, setPage } = useContext(PageContext);
     const materials = getUniqueMaterials(data);
     const [material, setMaterial] = useState();
 
@@ -17,7 +17,7 @@ export default function Raid() {
         tg.MainButton.text = "Next";
         tg.MainButton.onClick(nextPage);
         tg.BackButton.text = "Back";
-        tg.BackButton.onClick(prevPage);
+        tg.BackButton.onClick(setPage(3));
         tg.BackButton.show();
     }, [nextPage]);
 

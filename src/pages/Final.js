@@ -18,7 +18,7 @@ export default function Final() {
 
     useEffect(() => {
         tg.MainButton.text = "TryAgain";
-        tg.MainButton.onClick(tryAgain());
+        tg.MainButton.onClick(tryAgain);
         tg.MainButton.show();
 
         tg.BackButton.hide();
