@@ -5,7 +5,7 @@
     justify-content: center;
     height: 80vh;
     text-align: center;
-    background-color: var(--tg-theme-bg-color);
+    background-color: var(--tg-theme-secondary-bg-color);
 }
 
 .start-page h2 {

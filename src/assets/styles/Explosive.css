@@ -12,12 +12,7 @@
 }
 
 .explosive-item.selected {
-    background-color: var(--tg-theme-section-header-text-color);
-}
-
-.explosive-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--tg-theme-button-text-color);
 }
 
 .explosive-item img {
@@ -31,4 +26,5 @@
     font-size: 14px;
     font-weight: bold;
     text-align: center;
+    color: var(--tg-theme-subtitle-text-color);
 }

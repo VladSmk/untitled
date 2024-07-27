@@ -22,7 +22,7 @@
 }
 
 .audit-list-item {
-    background-color: #575757;
+    background-color: var(--tg-theme-bg-color);
     padding: 10px;
     border-radius: 5px;
     text-align: center;
