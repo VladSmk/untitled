@@ -16,7 +16,7 @@ export default function Check() {
         tg.BackButton.text = "Back";
         tg.BackButton.onClick(setPage(4));
         tg.BackButton.show();
-    }, []);
+    }, [setPage]);
 
     return (
         <div className="check-page">

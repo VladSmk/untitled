@@ -15,7 +15,7 @@ export default function SelectBoost() {
         tg.BackButton.text = "Back";
         tg.BackButton.onClick(setPage(2));
         tg.BackButton.show();
-    }, []);
+    }, [nextPage, setPage]);
 
     return (
         <div className="boost-page">

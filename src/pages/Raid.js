@@ -19,7 +19,7 @@ export default function Raid() {
         tg.BackButton.text = "Back";
         tg.BackButton.onClick(setPage(3));
         tg.BackButton.show();
-    }, [nextPage]);
+    }, [nextPage, setPage]);
 
     useEffect(() => {
         if (selectedItems.length === 0) {

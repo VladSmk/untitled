@@ -22,7 +22,7 @@ export default function Final() {
         tg.MainButton.show();
 
         tg.BackButton.hide();
-    }, []);
+    }, [tryAgain]);
 
     return (
         <div>
