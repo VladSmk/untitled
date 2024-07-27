@@ -5,8 +5,8 @@
     font-family: 'Calibri', sans-serif;
 }
 body {
-    background-color: #6a6a6a;
-    color: #f6f6f6;
+    background-color: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
 }
 
 .app-container {

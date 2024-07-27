@@ -9,9 +9,11 @@ import Final from "./pages/Final";
 import './assets/styles/App.css';
 
 export const tg = window.Telegram.WebApp;
+tg.setBackgroundColor()
 
 function App() {
     const { page } = useContext(PageContext);
+
     return (
         <>
             {page === 1 ? (
