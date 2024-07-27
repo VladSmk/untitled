@@ -1,12 +1,15 @@
 .title-block-f {
     padding: 10px 5% 0 5%;
+    margin-bottom: 10px;
     width: 100%;
     box-sizing: border-box;
+    bottom: 0;
 }
 .title-style-f {
     text-align: center;
     color: var(--tg-theme-text-color);
 }
+
 .sulfur-info {
     width: 100%;
     text-align: center;
