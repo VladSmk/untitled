@@ -8,7 +8,8 @@ import Check from "./pages/Check";
 import Final from "./pages/Final";
 import './assets/styles/App.css';
 
-import bl from './assets/img/items/b1.png';
+import p1 from './assets/img/items/b1.png';
+import p2 from './assets/img/exp/p1.jpg';
 
 export const tg = window.Telegram.WebApp;
 
@@ -17,7 +18,8 @@ function App() {
 
     return (
         <>
-            <img src={bl} alt={"..."}/>
+            <img src={p1} alt={"..."}/>
+            <img src={p2} alt={"..."}/>
             {/*{page === 1 ? (*/}
             {/*    <Start />*/}
             {/*) : page === 2 ? (*/}
