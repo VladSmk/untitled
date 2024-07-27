@@ -8,8 +8,8 @@ import Check from "./pages/Check";
 import Final from "./pages/Final";
 import './assets/styles/App.css';
 
-// const tele = window.Telegram.WebApp;
-// tele.expand();
+const tele = window.Telegram.WebApp;
+tele.expand();
 
 function App() {
 
