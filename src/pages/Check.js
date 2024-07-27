@@ -1,5 +1,5 @@
 import '../assets/styles/Check.css';
-import { useContext } from "react";
+import {useContext, useEffect} from "react";
 import { DataContext } from "../context/DataContext";
 import { PageContext } from "../context/PageContext";
 import "../assets/styles/Check.css";
@@ -7,6 +7,16 @@ import {tg} from "../App";
 export default function Check() {
     const { prevPage, nextPage } = useContext(PageContext);
     const { selectedItems, selectedExplosives } = useContext(DataContext);
+
+    useEffect(() => {
+        tg.MainButton.text = "Next";
+        tg.MainButton.onClick(nextPage);
+        tg.MainButton.show();
+
+        tg.BackButton.text = "Back";
+        tg.BackButton.onClick(prevPage);
+        tg.BackButton.show();
+    }, []);
 
     return (
         <div className="check-page">
@@ -34,10 +44,10 @@ export default function Check() {
                     </ul>
                 </div>
             </div>
-            <div className="navigate-button-block">
-                <button className="navigate-button" onClick={prevPage}>Prev</button>
-                <button className="navigate-button" onClick={nextPage}>Next</button>
-            </div>
+            {/*<div className="navigate-button-block">*/}
+            {/*    <button className="navigate-button" onClick={prevPage}>Prev</button>*/}
+            {/*    <button className="navigate-button" onClick={nextPage}>Next</button>*/}
+            {/*</div>*/}
         </div>
     );
 }

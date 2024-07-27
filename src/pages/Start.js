@@ -9,6 +9,7 @@ export default function Start() {
         tg.MainButton.text = "Start";
         tg.MainButton.onClick(nextPage);
         tg.MainButton.show();
+        tg.BackButton.hide();
     }, []);
 
     const { nextPage } = useContext(PageContext);
@@ -17,9 +18,9 @@ export default function Start() {
         <div className="start-page">
             <h2>Calculator</h2>
             <h2>LEGOTM</h2>
-            <div className="navigate-button-block">
-                <a className="navigate-button" onClick={nextPage}>Next</a>
-            </div>
+            {/*<div className="navigate-button-block">*/}
+            {/*    <a className="navigate-button" onClick={nextPage}>Next</a>*/}
+            {/*</div>*/}
         </div>
     );
 }

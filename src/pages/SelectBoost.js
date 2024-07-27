@@ -21,10 +21,10 @@ export default function SelectBoost() {
         <div className="boost-page">
             <h2>Boost Page</h2>
             <Loading/>
-            <div className="navigate-button-block">
-                <button className="navigate-button" onClick={prevPage}>Prev</button>
-                <button className="navigate-button" onClick={nextPage}>Next</button>
-            </div>
+            {/*<div className="navigate-button-block">*/}
+            {/*    <button className="navigate-button" onClick={prevPage}>Prev</button>*/}
+            {/*    <button className="navigate-button" onClick={nextPage}>Next</button>*/}
+            {/*</div>*/}
         </div>
     );
 

@@ -1,8 +1,9 @@
 import '../assets/styles/Final.css';
-import { useContext } from "react";
+import {useContext, useEffect} from "react";
 import { DataContext } from "../context/DataContext";
 import useCalculator from "../hooks/useCalculator";
 import { PageContext } from "../context/PageContext";
+import {tg} from "../App";
 
 export default function Final() {
     const { setPage } = useContext(PageContext);
@@ -14,6 +15,14 @@ export default function Final() {
         deleteData();
         setPage(2);
     }
+
+    useEffect(() => {
+        tg.MainButton.text = "TryAgain";
+        tg.MainButton.onClick(tryAgain());
+        tg.MainButton.show();
+
+        tg.BackButton.hide();
+    }, []);
 
     return (
         <div>
@@ -27,9 +36,9 @@ export default function Final() {
                     ))}
                 </ul>
             </div>
-            <div className="navigate-button-block">
-                <button className="navigate-button" onClick={tryAgain}>Try Again</button>
-            </div>
+            {/*<div className="navigate-button-block">*/}
+            {/*    <button className="navigate-button" onClick={tryAgain}>Try Again</button>*/}
+            {/*</div>*/}
             <div className="sulfur-info">
                 Total sulfur: {sulfur}
             </div>

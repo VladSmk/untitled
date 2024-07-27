@@ -1,5 +1,5 @@
 import "../assets/styles/Raid.css";
-import {useContext, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {PageContext} from "../context/PageContext";
 import { data } from "../data/itemsData";
 import Item from "../components/Item";
@@ -13,6 +13,21 @@ export default function Raid() {
     const materials = getUniqueMaterials(data);
     const [material, setMaterial] = useState();
 
+    useEffect(() => {
+        tg.MainButton.text = "Next";
+        tg.MainButton.onClick(nextPage);
+        tg.BackButton.text = "Back";
+        tg.BackButton.onClick(prevPage);
+        tg.BackButton.show();
+    }, [nextPage]);
+
+    useEffect(() => {
+        if (selectedItems.length === 0) {
+            tg.MainButton.hide();
+        } else {
+            tg.MainButton.show();
+        }
+    }, [selectedItems]);
 
     return (
         <div className={"raid-main-block"}>
@@ -33,12 +48,12 @@ export default function Raid() {
                     )
                 ))}
             </div>
-            <div className="navigate-button-block">
-                <button className="navigate-button" onClick={prevPage}>Prev</button>
-                {selectedItems.length > 0 && (
-                    <button className="navigate-button" onClick={nextPage}>Next</button>
-                )}
-            </div>
+            {/*<div className="navigate-button-block">*/}
+            {/*    <button className="navigate-button" onClick={prevPage}>Prev</button>*/}
+            {/*    {selectedItems.length > 0 && (*/}
+            {/*        <button className="navigate-button" onClick={nextPage}>Next</button>*/}
+            {/*    )}*/}
+            {/*</div>*/}
         </div>
     );
 }
