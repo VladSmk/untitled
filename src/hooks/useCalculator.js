@@ -195,20 +195,6 @@ const useCalculator = (selectedExplosives, selectedItems) => {
         return explosives[minCostIndex];
     }
 
-    function removeLastHyphenatedNumber(str) {
-        const lastHyphenIndex = str.lastIndexOf('-');
-        if (lastHyphenIndex === -1) return str;
-        const segmentAfterHyphen = str.slice(lastHyphenIndex + 1);
-        if (!isNaN(segmentAfterHyphen.trim())) {
-            return str.slice(0, lastHyphenIndex);
-        }
-        return str;
-    }
-
-    function getNumberPart(str) {
-        return str.split('-').pop();
-    }
-
     function getSulfurByExplosive(name) {
         const index = explosives.indexOf(name);
         if (index !== -1) {

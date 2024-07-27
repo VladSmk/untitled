@@ -9,7 +9,7 @@ import {tg} from "../App";
 
 export default function Raid() {
     const { selectedItems } = useContext(DataContext);
-    const { nextPage, prevPage, setPage } = useContext(PageContext);
+    const { nextPage, prevPage } = useContext(PageContext);
     const materials = getUniqueMaterials(data);
     const [material, setMaterial] = useState(null);
 
@@ -45,8 +45,8 @@ export default function Raid() {
             <div className="items-container">
                 {data.map((item) => (
                     item.material === material && (
-                        <div className="item" key={item.material+"-"+item.name}>
-                            <Item material={item.material} name={item.name} image={item.image} key={item.material+"-"+item.name}/>
+                        <div className="item">
+                            <Item key={item.material+"-"+item.name} material={item.material} name={item.name} image={item.image} />
                         </div>
                     )
                 ))}
