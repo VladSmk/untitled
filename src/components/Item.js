@@ -22,7 +22,6 @@ export default function Item({material, name, image}) {
     return (
         <div className={"block"}>
             <div className={"image-block"} onClick={plusOne}>
-                <img src={image} alt={"...."}/>
                 <img className={"image"} src={image} alt={"..."}/>
                 {number > 0 && (
                     <div className={"number-block"} style={{padding: number > 9 ? '5px 6.5px' : '5px 10px'}}>
