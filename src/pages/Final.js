@@ -14,11 +14,13 @@ export default function Final() {
     function handleTryAgain (){
         deleteData();
         setPage(2);
+        tg.MainButton.onClick(null);
+        tg.MainButton.hide();
     }
 
     useEffect(() => {
         tg.MainButton.text = "Try Again";
-        tg.MainButton.onClick(handleTryAgain);
+        tg.MainButton.onClick(() => handleTryAgain);
         tg.MainButton.show();
 
         tg.BackButton.hide();
