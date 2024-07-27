@@ -11,10 +11,6 @@
     margin: 0;
 }
 
-.explosive-item.selected {
-    background-color: var(--tg-theme-button-color);
-}
-
 .explosive-item img {
     width: 80px;
     height: 80px;
@@ -27,4 +23,8 @@
     font-weight: bold;
     text-align: center;
     color: var(--tg-theme-subtitle-text-color);
+}
+
+.explosive-name.selected {
+    color: var(--tg-theme-button-color);
 }

@@ -1,10 +1,11 @@
 .title-block {
     padding: 10px 5% 0 5%;
     width: 100%;
-    z-index: 2;
+    box-sizing: border-box;
 }
 .title-style {
     text-align: center;
+    color: var(--tg-theme-text-color);
 }
 .sulfur-info {
     width: 100%;
@@ -36,22 +37,4 @@
     font-size: 1.2em;
     width: 94%;
     margin: 10px 3%;
-}
-
-
-
-
-@media (max-width: 600px) {
-    .audit-header {
-        font-size: 1.2em;
-    }
-
-    .audit-list-item {
-        font-size: 1em;
-        padding: 8px;
-    }
-
-    .sulfur-info {
-        font-size: 1em;
-    }
 }
