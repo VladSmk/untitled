@@ -8,6 +8,8 @@ import Check from "./pages/Check";
 import Final from "./pages/Final";
 import './assets/styles/App.css';
 
+export const tg = window.Telegram.WebApp;
+
 function App() {
     const { page } = useContext(PageContext);
 
